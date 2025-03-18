@@ -1,0 +1,24 @@
+# Ignore .NET build output
+bin/
+obj/
+
+# Ignore user-specific files
+appsettings.json
+appsettings.Development.json
+*.user
+*.suo
+
+# Ignore local database files
+*.db
+*.mdf
+*.ldf
+
+# Ignore package directories
+packages/
+
+# Ignore Visual Studio temporary files
+*.vs/
+
+# Ignore Git-specific files
+.gitattributes
+.git

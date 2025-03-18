@@ -1,0 +1,66 @@
+﻿@model List<ECommerceApp.Data.Product>
+
+@{
+    ViewData["Title"] = "Product Listing";
+    var recommendedProducts = ViewBag.RecommendedProducts as List<ECommerceApp.Data.Product>;
+}
+
+<h2>Products</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price.ToString("C")</td>
+                <td>@product.Category</td>
+                <td>@product.Description</td>
+                <td>
+                    <form asp-controller="Cart" asp-action="Add" method="post" style="display:inline;">
+                        <input type="hidden" name="productId" value="@product.Id" />
+                        <button type="submit" class="btn btn-primary btn-sm">Add to Cart</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Recommended Products</h2>
+@if (recommendedProducts != null && recommendedProducts.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in recommendedProducts)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>@product.Category</td>
+                    <td>@product.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No recommendations available.</p>
+}

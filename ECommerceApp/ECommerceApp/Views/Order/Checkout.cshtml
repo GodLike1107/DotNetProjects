@@ -1,0 +1,33 @@
+﻿@model ECommerceApp.Data.Order
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<h2>Checkout</h2>
+
+<h4>Order Summary</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.Product.Name</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>@item.Quantity</td>
+                <td>@((item.Price * item.Quantity).ToString("C"))</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h4>Total: @Model.Total.ToString("C")</h4>
+<p>Order placed on: @Model.OrderDate</p>
+<a asp-controller="Product" asp-action="Index" class="btn btn-primary">Continue Shopping</a>

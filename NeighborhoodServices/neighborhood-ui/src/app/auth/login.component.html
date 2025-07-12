@@ -1,0 +1,79 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="header">
+      <h2>Welcome Back</h2>
+      <p class="subtitle">Sign in to your account</p>
+    </div>
+
+    <form (ngSubmit)="login()" novalidate class="login-form">
+      <div *ngIf="error" class="alert alert-error">
+        <svg class="alert-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+        </svg>
+        {{ error }}
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Email Address</label>
+        <div class="input-wrapper">
+          <input 
+            type="email" 
+            id="email"
+            [(ngModel)]="email" 
+            name="email" 
+            class="form-input"
+            placeholder="Enter your email address"
+            required 
+            autocomplete="email"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="password-header">
+          <label for="password" class="form-label">Password</label>
+          <a routerLink="/forgot-password" class="forgot-link">Forgot password?</a>
+        </div>
+        <div class="input-wrapper">
+          <input 
+            type="password" 
+            id="password"
+            [(ngModel)]="password" 
+            name="password" 
+            class="form-input"
+            placeholder="Enter your password"
+            required 
+            autocomplete="current-password"
+          />
+        </div>
+      </div>
+
+      <div class="form-options">
+        <label class="checkbox-wrapper">
+          <input type="checkbox" class="checkbox">
+          <span class="checkmark"></span>
+          <span class="checkbox-label">Remember me</span>
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn" [disabled]="isLoading">
+        <span *ngIf="isLoading" class="loading-spinner"></span>
+        <span>{{ isLoading ? 'Signing in...' : 'Sign In' }}</span>
+      </button>
+    </form>
+
+    <div class="divider">
+      <span class="divider-text">or</span>
+    </div>
+
+    <div class="social-login">
+      <google-signin-button (signIn)="handleGoogleSignIn($event)">
+      </google-signin-button>
+    </div>
+
+    <p class="signup-link">
+      Don't have an account? 
+      <a routerLink="/signup" class="link">Create one here</a>
+    </p>
+  </div>
+</div>

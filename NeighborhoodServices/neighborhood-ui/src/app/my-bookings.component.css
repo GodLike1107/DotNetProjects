@@ -1,0 +1,174 @@
+.bookings-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 12px;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.export-btn {
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.export-btn.pdf {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.export-btn.pdf:hover {
+  background-color: #c62828;
+}
+
+.export-btn.csv {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.export-btn.csv:hover {
+  background-color: #388e3c;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+thead {
+  background-color: #1976d2;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Card Styles */
+.bookings-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.booking-card {
+  background-color: #fafafa;
+  border-left: 6px solid #1976d2;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card-category {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.badge-pending {
+  background-color: #fff176;
+  color: #000;
+}
+
+.badge-confirmed {
+  background-color: #64b5f6;
+  color: #000;
+}
+
+.badge-completed {
+  background-color: #81c784;
+  color: #000;
+}
+
+.cancel-button {
+  background-color: #e53935;
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.cancel-button:hover {
+  background-color: #c62828;
+}
+
+.alert-info {
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.pay-button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #00c853;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0, 200, 83, 0.4);
+}
+
+.pay-button:hover {
+  background-color: #00b44b;
+  transform: translateY(-1px);
+}
+
+.pay-button:active {
+  background-color: #009e3c;
+  transform: scale(0.97);
+}
+

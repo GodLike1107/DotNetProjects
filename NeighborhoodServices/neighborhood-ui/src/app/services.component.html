@@ -1,0 +1,63 @@
+<!-- ✅ Toast Message Alert -->
+<div *ngIf="showMessage"
+     class="message-toast"
+     [ngClass]="{
+       'message-success': messageType === 'success',
+       'message-error': messageType === 'error',
+       'message-warning': messageType === 'warning'
+     }">
+  <div class="message-content d-flex justify-content-between align-items-center">
+    <span class="message-text">{{ message }}</span>
+    <button class="message-close btn btn-sm btn-link text-white" (click)="hideMessage()">&times;</button>
+  </div>
+</div>
+
+<h2 class="mb-4">Neighborhood Services 🛠️</h2>
+
+<!-- Back Button if Highlight Active -->
+<div *ngIf="highlightedServiceId" class="mb-3">
+  <button (click)="clearHighlight()" class="btn btn-outline-secondary btn-sm">← Back to All Services</button>
+</div>
+
+<!-- ✅ Search + Category Filter -->
+<div *ngIf="services.length > 1" class="search-filter mb-4 d-flex flex-wrap gap-3 align-items-center">
+  <input type="text" [(ngModel)]="searchQuery" (input)="filterServices()" placeholder="🔍 Search services..." class="form-control w-50" />
+  <select [(ngModel)]="selectedCategory" (change)="filterServices()" class="form-select w-25">
+    <option value="">All Categories</option>
+    <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+  </select>
+</div>
+
+<!-- ✅ Conditional States -->
+<div *ngIf="isLoading" class="text-info">Loading services...</div>
+<div *ngIf="error" class="text-danger">{{ error }}</div>
+<div *ngIf="!isLoading && filteredServices.length === 0 && !error">No matching services found.</div>
+
+<!-- ✅ Services List -->
+<div
+  *ngFor="let service of filteredServices; index as i"
+  class="card p-3 mb-4 border rounded shadow-sm service-card position-relative"
+  [id]="'service-' + service.id"
+  [ngClass]="{ 'highlighted-service': service.id === highlightedServiceId }"
+>
+  <div *ngIf="service.id === highlightedServiceId" class="recommended-badge">Recommended</div>
+
+  <h5 class="mb-2">{{ i + 1 }}. {{ service.title }} ({{ service.category }}) - ₹{{ service.price }}</h5>
+  <p><strong>Provided by:</strong> {{ service.providerName }}</p>
+  <p>{{ service.description }}</p>
+
+  <div class="d-flex gap-3 flex-wrap align-items-center mt-3">
+    <button (click)="viewDetails(service.id)" class="btn btn-outline-primary">View Details</button>
+
+    <ng-container *ngIf="canBook(); else notCustomer">
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <input type="datetime-local" [(ngModel)]="bookingTime[service.id]" class="form-control" style="min-width: 220px;" />
+        <button class="btn btn-success" (click)="bookService(service.id)" [disabled]="!bookingTime[service.id]">Book</button>
+      </div>
+    </ng-container>
+
+    <ng-template #notCustomer>
+      <p class="text-muted mt-2"><em>Login as a Customer to book this service.</em></p>
+    </ng-template>
+  </div>
+</div>

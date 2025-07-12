@@ -1,0 +1,32 @@
+<!-- ✅ Show header only if not on auth-related routes -->
+<header class="main-header" *ngIf="!hideNavbar()">
+  <div class="header-container">
+    <div class="logo-title">
+      <h1>
+        <a href="/" class="logo-link">
+          Neighbourhood Services <span class="emoji">🏘️</span>
+        </a>
+      </h1>
+    </div>
+
+    <nav class="nav-links">
+      <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+      <a routerLink="/services" routerLinkActive="active" class="nav-link">Services</a>
+      <a routerLink="/my-bookings" routerLinkActive="active" class="nav-link">My Bookings</a>
+      <a *ngIf="!auth.isLoggedIn()" routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
+      <a *ngIf="auth.isLoggedIn()" (click)="logout()" href="#" class="nav-link">Logout</a>
+    </nav>
+
+    <div *ngIf="auth.isLoggedIn()" class="user-info">
+      <span class="user-label">
+        👤 {{ getUserName() }} (Role: {{ getUserRole() }})
+      </span>
+    </div>
+  </div>
+</header>
+
+<!-- ✅ Hide divider on auth pages too -->
+<hr class="header-divider" *ngIf="!hideNavbar()" />
+
+<!-- Main content rendering -->
+<router-outlet></router-outlet>

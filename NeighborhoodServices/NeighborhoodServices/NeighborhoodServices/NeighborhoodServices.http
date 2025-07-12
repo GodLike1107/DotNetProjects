@@ -1,0 +1,6 @@
+@NeighborhoodServices_HostAddress = http://localhost:5210
+
+GET {{NeighborhoodServices_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

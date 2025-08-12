@@ -36,10 +36,6 @@ SmartHealthcareSolution/
 │
 └── README.md # Project documentation
 
-yaml
-Copy
-Edit
-
 ---
 
 ## ⚙️ Setup Instructions

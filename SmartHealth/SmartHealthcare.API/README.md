@@ -19,22 +19,27 @@ Built with **ASP.NET Core Web API**, **Entity Framework Core**, and **SQL Server
 ## 📂 Folder Structure
 SmartHealthcareSolution/
 │
-├── SmartHealthcare.API/ # ASP.NET Core Web API project
-│ ├── Controllers/ # API controllers for each entity
-│ │ ├── PatientsController.cs
-│ │ ├── DoctorsController.cs
-│ │ ├── AppointmentsController.cs
-│ │ ├── BillsController.cs
-│ │
-│ ├── Models/ # Entity models (Patient, Doctor, Appointment, Bill)
-│ ├── Data/ # DbContext and configuration files
-│ ├── DTOs/ # Data Transfer Objects
-│ ├── Services/ # Business logic services
-│ ├── Migrations/ # EF Core migrations
-│ ├── appsettings.json # Configuration (DB connection, JWT settings)
-│ ├── Program.cs # Entry point
+├── SmartHealthcare.API/           # API Layer - Controllers, endpoints, request handling
+│   ├── Controllers/                # Patient, Doctor, Appointment, Billing, Prescription, Feedback controllers
+│   ├── Program.cs                  # Application startup configuration
+│   └── appsettings.json            # Application configuration (DB connection strings, etc.)
 │
-└── README.md # Project documentation
+├── SmartHealthcare.Application/    # Application Layer - Business logic
+│   ├── Interfaces/                  # Service interfaces
+│   ├── Services/                     # Implementation of business logic
+│   ├── DTOs/                         # Data Transfer Objects
+│   └── Exceptions/                   # Custom exception handling
+│
+├── SmartHealthcare.Infrastructure/ # Infrastructure Layer - Database & EF Core
+│   ├── Data/                         # DbContext & Migrations
+│   ├── Repositories/                 # Data access implementations
+│   └── Migrations/                   # EF Core migrations
+│
+└── SmartHealthcare.Core/            # Core Layer - Domain models & constants
+    ├── Entities/                     # Patient, Doctor, Appointment, etc.
+    ├── Enums/                        # Appointment status, payment status, etc.
+    └── Constants/                    # Static values
+
 
 ---
 

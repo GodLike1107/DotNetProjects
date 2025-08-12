@@ -45,5 +45,27 @@ This system helps manage **patients, doctors, appointments, prescriptions, billi
 ---
 
 ## 📂 Folder Structure
+SmartHealthcareSolution/
+│
+├── SmartHealthcare.API/           # API Layer - Controllers, endpoints, request handling
+│   ├── Controllers/                # Patient, Doctor, Appointment, Billing, Prescription, Feedback controllers
+│   ├── Program.cs                  # Application startup configuration
+│   └── appsettings.json            # Application configuration (DB connection strings, etc.)
+│
+├── SmartHealthcare.Application/    # Application Layer - Business logic
+│   ├── Interfaces/                  # Service interfaces
+│   ├── Services/                     # Implementation of business logic
+│   ├── DTOs/                         # Data Transfer Objects
+│   └── Exceptions/                   # Custom exception handling
+│
+├── SmartHealthcare.Infrastructure/ # Infrastructure Layer - Database & EF Core
+│   ├── Data/                         # DbContext & Migrations
+│   ├── Repositories/                 # Data access implementations
+│   └── Migrations/                   # EF Core migrations
+│
+└── SmartHealthcare.Core/            # Core Layer - Domain models & constants
+    ├── Entities/                     # Patient, Doctor, Appointment, etc.
+    ├── Enums/                        # Appointment status, payment status, etc.
+    └── Constants/                    # Static values
 
 

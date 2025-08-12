@@ -1,0 +1,660 @@
+{
+  "Version": 1,
+  "Hash": "6IWJyuZ6cpHfKv2ZTx3K99DNtDtXEraiD3D0aVCgnxI=",
+  "Source": "SmartHealthcare.API",
+  "BasePath": "_content/SmartHealthcare.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\SmartHealthcare.UI.csproj",
+      "Version": 2,
+      "Source": "SmartHealthcare.UI",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SmartHealthcare.UI\\wwwroot",
+      "Source": "SmartHealthcare.UI",
+      "ContentRoot": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\",
+      "BasePath": "_content/SmartHealthcare.UI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.API\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SmartHealthcare.API.styles.css",
+      "SourceId": "SmartHealthcare.API",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.API\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/SmartHealthcare.API",
+      "RelativePath": "SmartHealthcare.API#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "6d8ty6tlzx",
+      "Integrity": "mhkjDZkY8NF3UmobQ3BVsuwTf3lzdJvFxr8O0/Bwm34=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.API\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SmartHealthcare.API.styles.css"
+    },
+    {
+      "Identity": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SmartHealthcare.UI.bundle.scp.css",
+      "SourceId": "SmartHealthcare.UI",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/SmartHealthcare.UI",
+      "RelativePath": "SmartHealthcare.UI#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "o25bzs3o7z",
+      "Integrity": "cBH5ssAjlSskdHqvha8PgLL2jqD9qgQYeGBnxdgZ/gU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SmartHealthcare.UI.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\app.css",
+      "SourceId": "SmartHealthcare.UI",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\",
+      "BasePath": "_content/SmartHealthcare.UI",
+      "RelativePath": "app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "da95v2qkru",
+      "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "SourceId": "SmartHealthcare.UI",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\",
+      "BasePath": "_content/SmartHealthcare.UI",
+      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bpk8xqwxhs",
+      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "SourceId": "SmartHealthcare.UI",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\",
+      "BasePath": "_content/SmartHealthcare.UI",
+      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\favicon.png",
+      "SourceId": "SmartHealthcare.UI",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\",
+      "BasePath": "_content/SmartHealthcare.UI",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\favicon.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "_content/SmartHealthcare.UI/app.css",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 16:37:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "_content/SmartHealthcare.UI/app.da95v2qkru.css",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 16:37:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da95v2qkru"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/SmartHealthcare.UI/app.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/SmartHealthcare.UI/bootstrap/bootstrap.min.bpk8xqwxhs.css",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 16:37:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bpk8xqwxhs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/SmartHealthcare.UI/bootstrap/bootstrap.min.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/SmartHealthcare.UI/bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 16:37:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "_content/SmartHealthcare.UI/bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 16:37:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/SmartHealthcare.UI/bootstrap/bootstrap.min.css.map"
+        }
+      ]
+    },
+    {
+      "Route": "_content/SmartHealthcare.UI/bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 16:37:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/SmartHealthcare.UI/favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 16:37:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/SmartHealthcare.UI/favicon.png"
+        }
+      ]
+    },
+    {
+      "Route": "_content/SmartHealthcare.UI/favicon.png",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 16:37:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "_content/SmartHealthcare.UI/SmartHealthcare.UI.bundle.scp.css",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SmartHealthcare.UI.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5919"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cBH5ssAjlSskdHqvha8PgLL2jqD9qgQYeGBnxdgZ/gU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 12 Aug 2025 08:46:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cBH5ssAjlSskdHqvha8PgLL2jqD9qgQYeGBnxdgZ/gU="
+        }
+      ]
+    },
+    {
+      "Route": "_content/SmartHealthcare.UI/SmartHealthcare.UI.o25bzs3o7z.bundle.scp.css",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SmartHealthcare.UI.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5919"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cBH5ssAjlSskdHqvha8PgLL2jqD9qgQYeGBnxdgZ/gU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 12 Aug 2025 08:46:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o25bzs3o7z"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cBH5ssAjlSskdHqvha8PgLL2jqD9qgQYeGBnxdgZ/gU="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/SmartHealthcare.UI/SmartHealthcare.UI.bundle.scp.css"
+        }
+      ]
+    },
+    {
+      "Route": "SmartHealthcare.API.6d8ty6tlzx.styles.css",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.API\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SmartHealthcare.API.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mhkjDZkY8NF3UmobQ3BVsuwTf3lzdJvFxr8O0/Bwm34=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 12 Aug 2025 08:46:43 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/SmartHealthcare.UI/SmartHealthcare.UI.o25bzs3o7z.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6d8ty6tlzx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mhkjDZkY8NF3UmobQ3BVsuwTf3lzdJvFxr8O0/Bwm34="
+        },
+        {
+          "Name": "label",
+          "Value": "SmartHealthcare.API.styles.css"
+        }
+      ]
+    },
+    {
+      "Route": "SmartHealthcare.API.styles.css",
+      "AssetFile": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.API\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SmartHealthcare.API.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mhkjDZkY8NF3UmobQ3BVsuwTf3lzdJvFxr8O0/Bwm34=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 12 Aug 2025 08:46:43 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/SmartHealthcare.UI/SmartHealthcare.UI.o25bzs3o7z.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mhkjDZkY8NF3UmobQ3BVsuwTf3lzdJvFxr8O0/Bwm34="
+        }
+      ]
+    }
+  ]
+}

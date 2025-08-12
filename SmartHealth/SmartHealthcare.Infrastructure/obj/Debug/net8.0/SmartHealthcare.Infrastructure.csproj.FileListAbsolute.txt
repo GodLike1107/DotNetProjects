@@ -1,0 +1,17 @@
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\bin\Debug\net8.0\SmartHealthcare.Infrastructure.deps.json
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\bin\Debug\net8.0\SmartHealthcare.Infrastructure.runtimeconfig.json
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\bin\Debug\net8.0\SmartHealthcare.Infrastructure.dll
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\bin\Debug\net8.0\SmartHealthcare.Infrastructure.pdb
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\bin\Debug\net8.0\SmartHealthcare.Core.dll
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\bin\Debug\net8.0\SmartHealthcare.Core.pdb
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\SmartHealthcare.Infrastructure.csproj.AssemblyReference.cache
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\SmartHealthcare.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\SmartHealthcare.Infrastructure.AssemblyInfoInputs.cache
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\SmartHealthcare.Infrastructure.AssemblyInfo.cs
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\SmartHealthcare.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\SmartHea.28E582FC.Up2Date
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\SmartHealthcare.Infrastructure.dll
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\refint\SmartHealthcare.Infrastructure.dll
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\SmartHealthcare.Infrastructure.pdb
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\SmartHealthcare.Infrastructure.genruntimeconfig.cache
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Infrastructure\obj\Debug\net8.0\ref\SmartHealthcare.Infrastructure.dll

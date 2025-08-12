@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SmartHealthcare.UI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SmartHealthcare.UI.o25bzs3o7z.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Coding\\dotNet\\Web API Projects\\SmartHealthcare\\SmartHealthcareSolution\\SmartHealthcare.UI\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SmartHealthcare.UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SmartHealthcare.UI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SmartHealthcare.UI.props",
+      "PackagePath": "build\\SmartHealthcare.UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SmartHealthcare.UI.props",
+      "PackagePath": "buildMultiTargeting\\SmartHealthcare.UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SmartHealthcare.UI.props",
+      "PackagePath": "buildTransitive\\SmartHealthcare.UI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

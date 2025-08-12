@@ -1,0 +1,478 @@
+[
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.AppointmentsController",
+    "Method": "UpdateAppointmentStatus",
+    "RelativePath": "api/Appointments/{id}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "SmartHealthcare.Core.DTOs.UpdateAppointmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.AppointmentsController",
+    "Method": "GetAllAppointments",
+    "RelativePath": "api/Appointments/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.AppointmentsController",
+    "Method": "BookAppointment",
+    "RelativePath": "api/Appointments/book",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SmartHealthcare.Core.DTOs.AppointmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.AppointmentsController",
+    "Method": "GetDoctorAppointments",
+    "RelativePath": "api/Appointments/doctor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.AppointmentsController",
+    "Method": "FilterAppointments",
+    "RelativePath": "api/Appointments/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "doctorId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "date",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.AppointmentsController",
+    "Method": "GetMyAppointments",
+    "RelativePath": "api/Appointments/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.AppointmentsController",
+    "Method": "GetAppointmentsByStatus",
+    "RelativePath": "api/Appointments/status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SmartHealthcare.Core.DTOs.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SmartHealthcare.Core.DTOs.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvailabilityController",
+    "Method": "AddAvailability",
+    "RelativePath": "api/Availability/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SmartHealthcare.Core.DTOs.AvailabilityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AvailabilityController",
+    "Method": "GetMyAvailability",
+    "RelativePath": "api/Availability/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.DoctorAvailabilityController",
+    "Method": "AddAvailability",
+    "RelativePath": "api/DoctorAvailability",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SmartHealthcare.Core.DTOs.DoctorAvailabilityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.DoctorAvailabilityController",
+    "Method": "GetMyAvailabilities",
+    "RelativePath": "api/DoctorAvailability/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.DoctorsController",
+    "Method": "AddDoctor",
+    "RelativePath": "api/Doctors/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SmartHealthcare.Core.DTOs.DoctorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.DoctorsController",
+    "Method": "GetAllDoctors",
+    "RelativePath": "api/Doctors/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.DoctorsController",
+    "Method": "SearchBySpecialization",
+    "RelativePath": "api/Doctors/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "specialization",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.DoctorsController",
+    "Method": "UpdateDoctor",
+    "RelativePath": "api/Doctors/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "SmartHealthcare.Core.DTOs.DoctorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FeedbackController",
+    "Method": "SubmitFeedback",
+    "RelativePath": "api/Feedback",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "feedback",
+        "Type": "SmartHealthcare.Core.Entities.Feedback",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FeedbackController",
+    "Method": "GetDoctorFeedback",
+    "RelativePath": "api/Feedback/doctor/{doctorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MedicalRecordsController",
+    "Method": "GetMyRecords",
+    "RelativePath": "api/MedicalRecords/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MedicalRecordsController",
+    "Method": "UploadRecord",
+    "RelativePath": "api/MedicalRecords/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SmartHealthcare.Core.DTOs.MedicalRecordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.PatientsController",
+    "Method": "AddPatient",
+    "RelativePath": "api/Patients/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SmartHealthcare.Core.DTOs.PatientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.PatientsController",
+    "Method": "GetMyProfile",
+    "RelativePath": "api/Patients/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PrescriptionController",
+    "Method": "CreatePrescription",
+    "RelativePath": "api/Prescription",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prescription",
+        "Type": "SmartHealthcare.Core.Entities.Prescription",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PrescriptionController",
+    "Method": "GetPrescription",
+    "RelativePath": "api/Prescription/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PrescriptionController",
+    "Method": "DownloadPrescription",
+    "RelativePath": "api/Prescription/download/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.PrescriptionsController",
+    "Method": "GetPrescriptionById",
+    "RelativePath": "api/Prescriptions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.PrescriptionsController",
+    "Method": "GetPrescriptionPdf",
+    "RelativePath": "api/Prescriptions/{id}/pdf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.PrescriptionsController",
+    "Method": "CreatePrescription",
+    "RelativePath": "api/Prescriptions/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SmartHealthcare.Core.DTOs.PrescriptionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.PrescriptionsController",
+    "Method": "GetMyPrescriptions",
+    "RelativePath": "api/Prescriptions/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.TestController",
+    "Method": "AdminEndpoint",
+    "RelativePath": "api/Test/admin-only",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.TestController",
+    "Method": "PublicEndpoint",
+    "RelativePath": "api/Test/public",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartHealthcare.API.Controllers.TestController",
+    "Method": "SecureEndpoint",
+    "RelativePath": "api/Test/secure",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

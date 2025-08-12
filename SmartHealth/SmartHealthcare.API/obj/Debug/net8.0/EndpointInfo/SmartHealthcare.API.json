@@ -1,0 +1,1281 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "SmartHealthcare.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Appointments/book": {
+      "post": {
+        "tags": [
+          "Appointments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointmentDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointmentDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointmentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointments/my": {
+      "get": {
+        "tags": [
+          "Appointments"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointments/doctor": {
+      "get": {
+        "tags": [
+          "Appointments"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointments/all": {
+      "get": {
+        "tags": [
+          "Appointments"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointments/{id}/status": {
+      "put": {
+        "tags": [
+          "Appointments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAppointmentDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAppointmentDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAppointmentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointments/status": {
+      "get": {
+        "tags": [
+          "Appointments"
+        ],
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointments/filter": {
+      "get": {
+        "tags": [
+          "Appointments"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "doctorId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Availability/add": {
+      "post": {
+        "tags": [
+          "Availability"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AvailabilityDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AvailabilityDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AvailabilityDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Availability/my": {
+      "get": {
+        "tags": [
+          "Availability"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DoctorAvailability": {
+      "post": {
+        "tags": [
+          "DoctorAvailability"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorAvailabilityDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorAvailabilityDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorAvailabilityDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DoctorAvailability/my": {
+      "get": {
+        "tags": [
+          "DoctorAvailability"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Doctors/add": {
+      "post": {
+        "tags": [
+          "Doctors"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Doctors/update/{id}": {
+      "put": {
+        "tags": [
+          "Doctors"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Doctors/all": {
+      "get": {
+        "tags": [
+          "Doctors"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Doctors/search": {
+      "get": {
+        "tags": [
+          "Doctors"
+        ],
+        "parameters": [
+          {
+            "name": "specialization",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Feedback": {
+      "post": {
+        "tags": [
+          "Feedback"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feedback"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feedback"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feedback"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Feedback/doctor/{doctorId}": {
+      "get": {
+        "tags": [
+          "Feedback"
+        ],
+        "parameters": [
+          {
+            "name": "doctorId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MedicalRecords/upload": {
+      "post": {
+        "tags": [
+          "MedicalRecords"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedicalRecordDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedicalRecordDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MedicalRecordDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MedicalRecords/my": {
+      "get": {
+        "tags": [
+          "MedicalRecords"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Patients/add": {
+      "post": {
+        "tags": [
+          "Patients"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Patients/me": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Prescription": {
+      "post": {
+        "tags": [
+          "Prescription"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Prescription"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Prescription"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Prescription"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Prescription/{id}": {
+      "get": {
+        "tags": [
+          "Prescription"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Prescription/download/{id}": {
+      "get": {
+        "tags": [
+          "Prescription"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Prescriptions/create": {
+      "post": {
+        "tags": [
+          "Prescriptions"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrescriptionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrescriptionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrescriptionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Prescriptions/my": {
+      "get": {
+        "tags": [
+          "Prescriptions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Prescriptions/{id}": {
+      "get": {
+        "tags": [
+          "Prescriptions"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Prescriptions/{id}/pdf": {
+      "get": {
+        "tags": [
+          "Prescriptions"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Test/public": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Test/secure": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Test/admin-only": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApplicationUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailConfirmed": {
+            "type": "boolean"
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumberConfirmed": {
+            "type": "boolean"
+          },
+          "twoFactorEnabled": {
+            "type": "boolean"
+          },
+          "lockoutEnd": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lockoutEnabled": {
+            "type": "boolean"
+          },
+          "accessFailedCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Appointment": {
+        "type": "object",
+        "properties": {
+          "appointmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scheduledTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "$ref": "#/components/schemas/AppointmentStatus"
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "patient": {
+            "$ref": "#/components/schemas/Patient"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AppointmentDto": {
+        "type": "object",
+        "properties": {
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scheduledTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "$ref": "#/components/schemas/AppointmentStatus"
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AppointmentStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "AvailabilityDto": {
+        "type": "object",
+        "properties": {
+          "availableFrom": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "availableTo": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Doctor": {
+        "type": "object",
+        "properties": {
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "specialization": {
+            "type": "string",
+            "nullable": true
+          },
+          "qualification": {
+            "type": "string",
+            "nullable": true
+          },
+          "experience": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "availability": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/ApplicationUser"
+          },
+          "appointments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Appointment"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoctorAvailabilityDto": {
+        "type": "object",
+        "properties": {
+          "availableDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-span"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-span"
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoctorDto": {
+        "type": "object",
+        "properties": {
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "specialization": {
+            "type": "string",
+            "nullable": true
+          },
+          "qualification": {
+            "type": "string",
+            "nullable": true
+          },
+          "experience": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "availability": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Feedback": {
+        "type": "object",
+        "properties": {
+          "feedbackId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "appointmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "appointment": {
+            "$ref": "#/components/schemas/Appointment"
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "patient": {
+            "$ref": "#/components/schemas/Patient"
+          },
+          "rating": {
+            "maximum": 5,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "comments": {
+            "maxLength": 1000,
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MedicalRecordDto": {
+        "type": "object",
+        "properties": {
+          "patientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Patient": {
+        "type": "object",
+        "properties": {
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "medicalHistory": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/ApplicationUser"
+          },
+          "appointments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Appointment"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PatientDto": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "medicalHistory": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Prescription": {
+        "required": [
+          "medicationDetails"
+        ],
+        "type": "object",
+        "properties": {
+          "prescriptionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "appointmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "appointment": {
+            "$ref": "#/components/schemas/Appointment"
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "patient": {
+            "$ref": "#/components/schemas/Patient"
+          },
+          "medicationDetails": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fileUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrescriptionDto": {
+        "type": "object",
+        "properties": {
+          "appointmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "medicationDetails": {
+            "type": "string",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterDto": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateAppointmentDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/AppointmentStatus"
+          },
+          "newScheduledTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Enter 'Bearer {your token}'",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

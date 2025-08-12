@@ -1,0 +1,14 @@
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\bin\Debug\net8.0\SmartHealthcare.Core.deps.json
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\bin\Debug\net8.0\SmartHealthcare.Core.runtimeconfig.json
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\bin\Debug\net8.0\SmartHealthcare.Core.dll
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\bin\Debug\net8.0\SmartHealthcare.Core.pdb
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\obj\Debug\net8.0\SmartHealthcare.Core.csproj.AssemblyReference.cache
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\obj\Debug\net8.0\SmartHealthcare.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\obj\Debug\net8.0\SmartHealthcare.Core.AssemblyInfoInputs.cache
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\obj\Debug\net8.0\SmartHealthcare.Core.AssemblyInfo.cs
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\obj\Debug\net8.0\SmartHealthcare.Core.csproj.CoreCompileInputs.cache
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\obj\Debug\net8.0\SmartHealthcare.Core.dll
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\obj\Debug\net8.0\refint\SmartHealthcare.Core.dll
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\obj\Debug\net8.0\SmartHealthcare.Core.pdb
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\obj\Debug\net8.0\SmartHealthcare.Core.genruntimeconfig.cache
+C:\Coding\dotNet\Web API Projects\SmartHealthcare\SmartHealthcareSolution\SmartHealthcare.Core\obj\Debug\net8.0\ref\SmartHealthcare.Core.dll

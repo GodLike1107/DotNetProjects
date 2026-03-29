@@ -1,0 +1,173 @@
+<div class="detail-page" id="property-detail-page">
+  @if (isLoading) {
+    <div class="loading-container">
+      <div class="loading-spinner"></div>
+      <p>Loading property details...</p>
+    </div>
+  }
+
+  @if (!isLoading && property) {
+    <div class="container">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a routerLink="/">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a [routerLink]="['/search']" [queryParams]="{city: property.city}">{{ property.city }}</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">{{ property.locality }}</span>
+      </div>
+
+      <div class="detail-layout">
+        <!-- Main Content -->
+        <div class="detail-main">
+          <!-- Image -->
+          <div class="detail-image" [style.background]="getPropertyImage()">
+            <div class="image-overlay">
+              <div class="image-icon-large">🏠</div>
+              <span class="image-type">{{ property.propertyType }}</span>
+            </div>
+            <div class="detail-badges">
+              <span class="badge-detail" [class.badge-buy]="property.listingType === 'Buy'" [class.badge-rent]="property.listingType === 'Rent'">
+                {{ property.listingType === 'Buy' ? '🏷️ For Sale' : '🔑 For Rent' }}
+              </span>
+              @if (property.furnishing) {
+                <span class="badge-detail badge-furnishing">{{ property.furnishing }}</span>
+              }
+            </div>
+            <button
+              class="fav-btn-detail"
+              [class.favorited]="property.isFavorited"
+              (click)="toggleFavorite()"
+              id="detail-fav-btn">
+              {{ property.isFavorited ? '♥ Saved' : '♡ Save' }}
+            </button>
+          </div>
+
+          <!-- Info -->
+          <div class="detail-info">
+            <div class="detail-price-row">
+              <h1 class="detail-price">{{ property.formattedPrice }}</h1>
+              <span class="detail-area">{{ property.area }} sq.ft</span>
+            </div>
+
+            <h2 class="detail-title">{{ property.title }}</h2>
+            <p class="detail-location">📍 {{ property.address || (property.locality + ', ' + property.city) }}</p>
+
+            <!-- Key Features -->
+            <div class="detail-features">
+              <div class="feature-box">
+                <span class="feature-value">{{ property.bedrooms }}</span>
+                <span class="feature-label">Bedrooms</span>
+              </div>
+              <div class="feature-box">
+                <span class="feature-value">{{ property.bathrooms }}</span>
+                <span class="feature-label">Bathrooms</span>
+              </div>
+              <div class="feature-box">
+                <span class="feature-value">{{ property.area }}</span>
+                <span class="feature-label">Sq. Ft.</span>
+              </div>
+              <div class="feature-box">
+                <span class="feature-value">{{ property.propertyType }}</span>
+                <span class="feature-label">Type</span>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="detail-section">
+              <h3>📋 Description</h3>
+              <p class="detail-description">{{ property.description }}</p>
+            </div>
+
+            <!-- Property Details Table -->
+            <div class="detail-section">
+              <h3>📊 Property Details</h3>
+              <div class="details-table">
+                <div class="detail-row">
+                  <span class="detail-key">Property Type</span>
+                  <span class="detail-val">{{ property.propertyType }}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-key">Listing Type</span>
+                  <span class="detail-val">{{ property.listingType }}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-key">Configuration</span>
+                  <span class="detail-val">{{ property.bedrooms }} BHK</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-key">Bathrooms</span>
+                  <span class="detail-val">{{ property.bathrooms }}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-key">Built-up Area</span>
+                  <span class="detail-val">{{ property.area }} sq.ft</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-key">Furnishing</span>
+                  <span class="detail-val">{{ property.furnishing || 'N/A' }}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-key">City</span>
+                  <span class="detail-val">{{ property.city }}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-key">Locality</span>
+                  <span class="detail-val">{{ property.locality }}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-key">Posted On</span>
+                  <span class="detail-val">{{ property.postedDate | date:'mediumDate' }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar - Contact Form -->
+        <aside class="detail-sidebar">
+          <div class="contact-card glass" id="contact-form-card">
+            <h3>📞 Contact Owner</h3>
+            <p class="contact-subtitle">Interested in this property? Send your inquiry.</p>
+
+            @if (!formSubmitted) {
+              <form (ngSubmit)="submitContact()" class="contact-form">
+                <div class="form-group">
+                  <label class="form-label">Name *</label>
+                  <input type="text" class="form-control" [(ngModel)]="contactForm.name" name="name" placeholder="Your full name" required id="contact-name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email *</label>
+                  <input type="email" class="form-control" [(ngModel)]="contactForm.email" name="email" placeholder="your@email.com" required id="contact-email">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone</label>
+                  <input type="tel" class="form-control" [(ngModel)]="contactForm.phone" name="phone" placeholder="+91 98765 43210" id="contact-phone">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control" [(ngModel)]="contactForm.message" name="message" rows="4" placeholder="Your message..." id="contact-message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary contact-submit-btn" [disabled]="isSubmitting" id="contact-submit-btn">
+                  {{ isSubmitting ? 'Sending...' : '📨 Send Inquiry' }}
+                </button>
+              </form>
+            } @else {
+              <div class="form-success">
+                <div class="success-icon">✅</div>
+                <h4>Inquiry Sent!</h4>
+                <p>We'll get back to you shortly.</p>
+              </div>
+            }
+          </div>
+        </aside>
+      </div>
+    </div>
+  }
+
+  @if (showToast) {
+    <div class="toast" [class.toast-success]="toastType === 'success'" [class.toast-error]="toastType === 'error'">
+      {{ toastMessage }}
+    </div>
+  }
+</div>

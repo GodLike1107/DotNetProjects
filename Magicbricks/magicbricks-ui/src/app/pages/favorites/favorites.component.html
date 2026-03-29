@@ -1,0 +1,38 @@
+<div class="favorites-page" id="favorites-page">
+  <div class="container">
+    <div class="page-header">
+      <h1>♥ My <span class="gradient-text">Favorites</span></h1>
+      <p class="page-subtitle">Your shortlisted properties</p>
+    </div>
+
+    @if (isLoading) {
+      <div class="loading-container">
+        <div class="loading-spinner"></div>
+        <p>Loading favorites...</p>
+      </div>
+    }
+
+    @if (!isLoading && favorites.length > 0) {
+      <div class="favorites-grid">
+        @for (property of favorites; track property.id) {
+          <app-property-card
+            [property]="property"
+            (favoriteToggled)="toggleFavorite($event)" />
+        }
+      </div>
+    }
+
+    @if (!isLoading && favorites.length === 0) {
+      <div class="empty-state">
+        <div class="empty-icon">💝</div>
+        <h3>No favorites yet</h3>
+        <p>Start exploring properties and save the ones you love!</p>
+        <a routerLink="/search" class="btn btn-primary">Explore Properties</a>
+      </div>
+    }
+  </div>
+
+  @if (showToast) {
+    <div class="toast toast-success">{{ toastMessage }}</div>
+  }
+</div>

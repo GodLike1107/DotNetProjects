@@ -1,0 +1,80 @@
+<section class="featured-cities section" id="featured-cities">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Explore Properties in <span class="gradient-text">Top Cities</span></h2>
+      <p class="section-subtitle">Discover your dream home in India's most sought-after locations</p>
+    </div>
+
+    <div class="cities-grid">
+      <!-- Bangalore -->
+      <a [routerLink]="['/search']" [queryParams]="{city: 'Bangalore'}" class="city-card" id="city-bangalore">
+        <div class="city-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+          <div class="city-icon">🏙️</div>
+        </div>
+        <div class="city-info">
+          <h3 class="city-name">Bangalore</h3>
+          <p class="city-desc">Silicon Valley of India</p>
+          <div class="city-stats">
+            <span>10 Properties</span>
+            <span>•</span>
+            <span>Buy & Rent</span>
+          </div>
+          <div class="city-localities">
+            <span class="locality-tag">Koramangala</span>
+            <span class="locality-tag">Whitefield</span>
+            <span class="locality-tag">Indiranagar</span>
+            <span class="locality-tag">HSR Layout</span>
+          </div>
+        </div>
+        <div class="city-arrow">→</div>
+      </a>
+
+      <!-- Mumbai -->
+      <a [routerLink]="['/search']" [queryParams]="{city: 'Mumbai'}" class="city-card" id="city-mumbai">
+        <div class="city-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+          <div class="city-icon">🌊</div>
+        </div>
+        <div class="city-info">
+          <h3 class="city-name">Mumbai</h3>
+          <p class="city-desc">City of Dreams</p>
+          <div class="city-stats">
+            <span>10 Properties</span>
+            <span>•</span>
+            <span>Buy & Rent</span>
+          </div>
+          <div class="city-localities">
+            <span class="locality-tag">Bandra</span>
+            <span class="locality-tag">Powai</span>
+            <span class="locality-tag">Andheri</span>
+            <span class="locality-tag">Juhu</span>
+          </div>
+        </div>
+        <div class="city-arrow">→</div>
+      </a>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h4>Smart Search</h4>
+        <p>Advanced filters to find exactly what you're looking for</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✅</div>
+        <h4>Verified Listings</h4>
+        <p>All properties are verified and up-to-date</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h4>Best Prices</h4>
+        <p>Competitive pricing with transparent cost breakdown</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h4>Expert Support</h4>
+        <p>Dedicated support to guide you through every step</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <span>🏠</span>
+          <span class="footer-brand-text">Magic<span class="gradient-text">Bricks</span></span>
+        </div>
+        <p class="footer-desc">Find your perfect property in India's top cities. Premium listings for Buy and Rent.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a routerLink="/">Home</a>
+        <a [routerLink]="['/search']" [queryParams]="{listingType: 'Buy'}">Buy Property</a>
+        <a [routerLink]="['/search']" [queryParams]="{listingType: 'Rent'}">Rent Property</a>
+        <a routerLink="/favorites">My Favorites</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Cities</h4>
+        <a [routerLink]="['/search']" [queryParams]="{city: 'Bangalore'}">Bangalore</a>
+        <a [routerLink]="['/search']" [queryParams]="{city: 'Mumbai'}">Mumbai</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <p class="footer-contact">📧 info&#64;magicbricks.com</p>
+        <p class="footer-contact">📞 +91 98765 43210</p>
+        <p class="footer-contact">📍 Bangalore, India</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {{ currentYear }} MagicBricks. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

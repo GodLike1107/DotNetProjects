@@ -1,0 +1,114 @@
+<section class="hero" id="hero-section">
+  <!-- Background elements -->
+  <div class="hero-bg-gradient"></div>
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="hero-content container">
+    <div class="hero-text animate-fade-in-up">
+      <h1 class="hero-title">
+        Find Your <span class="gradient-text">Dream Property</span><br>
+        in India
+      </h1>
+      <p class="hero-subtitle">
+        Discover premium properties in Bangalore & Mumbai. Your perfect home is just a search away.
+      </p>
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-box glass animate-fade-in-up" style="animation-delay: 0.2s" id="search-box">
+      <!-- Listing Type Toggle -->
+      <div class="listing-toggle" id="listing-toggle">
+        <button
+          class="toggle-btn"
+          [class.active]="listingType === 'Buy'"
+          (click)="setListingType('Buy')"
+          id="toggle-buy">
+          🏷️ Buy
+        </button>
+        <button
+          class="toggle-btn"
+          [class.active]="listingType === 'Rent'"
+          (click)="setListingType('Rent')"
+          id="toggle-rent">
+          🔑 Rent
+        </button>
+      </div>
+
+      <!-- Search Form -->
+      <div class="search-form" id="search-form">
+        <div class="search-row">
+          <!-- City -->
+          <div class="search-field">
+            <label class="form-label">City</label>
+            <select class="form-control" [(ngModel)]="city" id="search-city">
+              <option value="">All Cities</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Mumbai">Mumbai</option>
+            </select>
+          </div>
+
+          <!-- Budget Min -->
+          <div class="search-field">
+            <label class="form-label">Min Budget</label>
+            <select class="form-control" [(ngModel)]="minBudget" id="search-min-budget">
+              @for (b of currentMinBudgets; track b.label) {
+                <option [value]="b.min ?? ''">{{ b.label }}</option>
+              }
+            </select>
+          </div>
+
+          <!-- Budget Max -->
+          <div class="search-field">
+            <label class="form-label">Max Budget</label>
+            <select class="form-control" [(ngModel)]="maxBudget" id="search-max-budget">
+              @for (b of currentMaxBudgets; track b.label) {
+                <option [value]="b.max ?? ''">{{ b.label }}</option>
+              }
+            </select>
+          </div>
+
+          <!-- Search Text -->
+          <div class="search-field search-field-text">
+            <label class="form-label">Search</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search locality, project..."
+              [(ngModel)]="searchText"
+              (keyup.enter)="onSearch()"
+              id="search-text-input">
+          </div>
+
+          <!-- Search Button -->
+          <button class="btn btn-primary search-btn" (click)="onSearch()" id="search-submit-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="hero-stats animate-fade-in-up" style="animation-delay: 0.4s">
+      <div class="stat-item">
+        <span class="stat-number">20+</span>
+        <span class="stat-label">Properties</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">2</span>
+        <span class="stat-label">Cities</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Verified</span>
+      </div>
+    </div>
+  </div>
+</section>

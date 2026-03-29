@@ -1,0 +1,164 @@
+<div class="search-page" id="search-page">
+  <div class="container">
+    <div class="search-layout">
+      <!-- Sidebar Filters -->
+      <aside class="filters-sidebar glass" id="filters-sidebar">
+        <div class="filters-header">
+          <h3>🔍 Filters</h3>
+          <button class="btn-clear" (click)="clearFilters()" id="clear-filters-btn">Clear All</button>
+        </div>
+
+        <!-- Listing Type -->
+        <div class="filter-group">
+          <label class="form-label">Listing Type</label>
+          <div class="filter-pills">
+            <button class="pill" [class.active]="filters.listingType === ''" (click)="filters.listingType = ''; applyFilters()">All</button>
+            <button class="pill" [class.active]="filters.listingType === 'Buy'" (click)="filters.listingType = 'Buy'; applyFilters()">Buy</button>
+            <button class="pill" [class.active]="filters.listingType === 'Rent'" (click)="filters.listingType = 'Rent'; applyFilters()">Rent</button>
+          </div>
+        </div>
+
+        <!-- City -->
+        <div class="filter-group">
+          <label class="form-label">City</label>
+          <select class="form-control" [(ngModel)]="filters.city" (change)="applyFilters()" id="filter-city">
+            <option value="">All Cities</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Mumbai">Mumbai</option>
+          </select>
+        </div>
+
+        <!-- BHK -->
+        <div class="filter-group">
+          <label class="form-label">Bedrooms</label>
+          <div class="filter-pills">
+            <button class="pill" [class.active]="!filters.bedrooms" (click)="filters.bedrooms = undefined; applyFilters()">Any</button>
+            <button class="pill" [class.active]="filters.bedrooms === 1" (click)="filters.bedrooms = 1; applyFilters()">1 BHK</button>
+            <button class="pill" [class.active]="filters.bedrooms === 2" (click)="filters.bedrooms = 2; applyFilters()">2 BHK</button>
+            <button class="pill" [class.active]="filters.bedrooms === 3" (click)="filters.bedrooms = 3; applyFilters()">3 BHK</button>
+            <button class="pill" [class.active]="filters.bedrooms === 4" (click)="filters.bedrooms = 4; applyFilters()">4 BHK</button>
+          </div>
+        </div>
+
+        <!-- Property Type -->
+        <div class="filter-group">
+          <label class="form-label">Property Type</label>
+          <select class="form-control" [(ngModel)]="filters.propertyType" (change)="applyFilters()" id="filter-property-type">
+            <option value="">All Types</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Villa">Villa</option>
+            <option value="Independent House">Independent House</option>
+            <option value="Studio">Studio</option>
+            <option value="Penthouse">Penthouse</option>
+          </select>
+        </div>
+
+        <!-- Furnishing -->
+        <div class="filter-group">
+          <label class="form-label">Furnishing</label>
+          <select class="form-control" [(ngModel)]="filters.furnishing" (change)="applyFilters()" id="filter-furnishing">
+            <option value="">Any</option>
+            <option value="Furnished">Furnished</option>
+            <option value="Semi-Furnished">Semi-Furnished</option>
+            <option value="Unfurnished">Unfurnished</option>
+          </select>
+        </div>
+
+        <!-- Search Text -->
+        <div class="filter-group">
+          <label class="form-label">Keyword</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search locality..."
+            [(ngModel)]="filters.searchText"
+            (keyup.enter)="applyFilters()"
+            id="filter-search-text">
+        </div>
+
+        <button class="btn btn-primary filter-apply-btn" (click)="applyFilters()" id="apply-filters-btn">
+          Apply Filters
+        </button>
+      </aside>
+
+      <!-- Results -->
+      <main class="results-main">
+        <!-- Results Header -->
+        <div class="results-header">
+          <div class="results-info">
+            <h2>{{ totalCount }} Properties Found</h2>
+            @if (filters.city || filters.listingType) {
+              <p class="results-summary">
+                @if (filters.listingType) { <span>{{ filters.listingType }}</span> }
+                @if (filters.city) { <span>in {{ filters.city }}</span> }
+              </p>
+            }
+          </div>
+          <div class="results-sort">
+            <label class="form-label">Sort By</label>
+            <select class="form-control sort-select" [(ngModel)]="filters.sortBy" (change)="onSortChange()" id="sort-select">
+              <option value="date_desc">Newest First</option>
+              <option value="price_asc">Price: Low to High</option>
+              <option value="price_desc">Price: High to Low</option>
+              <option value="area_desc">Area: Largest First</option>
+              <option value="area_asc">Area: Smallest First</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Loading -->
+        @if (isLoading) {
+          <div class="loading-grid">
+            @for (i of [1,2,3,4,5,6]; track i) {
+              <div class="skeleton-card">
+                <div class="skeleton-image"></div>
+                <div class="skeleton-content">
+                  <div class="skeleton-line w-40"></div>
+                  <div class="skeleton-line w-80"></div>
+                  <div class="skeleton-line w-60"></div>
+                </div>
+              </div>
+            }
+          </div>
+        }
+
+        <!-- Property Grid -->
+        @if (!isLoading && properties.length > 0) {
+          <div class="properties-grid" id="properties-grid">
+            @for (property of properties; track property.id) {
+              <app-property-card
+                [property]="property"
+                (favoriteToggled)="toggleFavorite($event)" />
+            }
+          </div>
+
+          <!-- Pagination -->
+          @if (totalPages > 1) {
+            <div class="pagination" id="pagination">
+              <button class="page-btn" [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">← Prev</button>
+              @for (page of pagesArray; track page) {
+                <button class="page-btn" [class.active]="page === currentPage" (click)="onPageChange(page)">{{ page }}</button>
+              }
+              <button class="page-btn" [disabled]="currentPage === totalPages" (click)="onPageChange(currentPage + 1)">Next →</button>
+            </div>
+          }
+        }
+
+        <!-- No Results -->
+        @if (!isLoading && properties.length === 0) {
+          <div class="no-results" id="no-results">
+            <div class="no-results-icon">🏘️</div>
+            <h3>No properties found</h3>
+            <p>Try adjusting your filters to find more properties</p>
+            <button class="btn btn-primary" (click)="clearFilters()">Clear Filters</button>
+          </div>
+        }
+      </main>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  @if (showToast) {
+    <div class="toast toast-success">{{ toastMessage }}</div>
+  }
+</div>

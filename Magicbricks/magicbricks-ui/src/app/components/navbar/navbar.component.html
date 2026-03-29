@@ -1,0 +1,23 @@
+<nav class="navbar" id="main-navbar">
+  <div class="navbar-container container">
+    <a routerLink="/" class="navbar-brand" id="nav-brand">
+      <span class="brand-icon">🏠</span>
+      <span class="brand-text">Magic<span class="brand-highlight">Bricks</span></span>
+    </a>
+
+    <div class="navbar-links" [class.active]="isMenuOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" id="nav-home">Home</a>
+      <a routerLink="/search" [queryParams]="{listingType: 'Buy'}" routerLinkActive="active" id="nav-buy">Buy</a>
+      <a routerLink="/search" [queryParams]="{listingType: 'Rent'}" routerLinkActive="active" id="nav-rent">Rent</a>
+      <a routerLink="/favorites" routerLinkActive="active" id="nav-favorites">
+        <span class="nav-heart">♥</span> Favorites
+      </a>
+    </div>
+
+    <button class="menu-toggle" (click)="toggleMenu()" id="nav-menu-toggle" aria-label="Toggle navigation menu">
+      <span class="menu-bar" [class.open]="isMenuOpen"></span>
+      <span class="menu-bar" [class.open]="isMenuOpen"></span>
+      <span class="menu-bar" [class.open]="isMenuOpen"></span>
+    </button>
+  </div>
+</nav>
